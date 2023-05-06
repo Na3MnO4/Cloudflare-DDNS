@@ -30,4 +30,13 @@ e.g.
 # Deploy Self-Start
 Windows
 
-Copy the shortcut of the vbs script(Please ensure the original vbs script and the py file are in the same dictionary) in the shell:startup dictionary by entering shell:startup in Win+R
+Edit the path of your py file in the vbs script
+
+e.g.
+
+    Dim ws
+    Set ws = Wscript.CreateObject("Wscript.Shell")
+    ws.Run "python.exe C:\Server\Cloudflare-DDNS\Cloudflare-DDNS.py",vbhide
+    Wscript.quit
+
+Copy a shortcut of the vbs script in the shell:startup dictionary by entering shell:startup in Win+R
